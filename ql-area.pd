@@ -1,4 +1,4 @@
-#N canvas 1158 196 366 397 10;
+#N canvas 1147 550 366 397 10;
 #N canvas 925 320 828 583 visible 0;
 #X obj 36 280 translateXYZ;
 #X obj 206 280 translateXYZ;
@@ -351,27 +351,27 @@
 #X restore 208 178 pd loadbang;
 #X obj 44 176 outlet;
 #X text 236 -85 reset;
-#N canvas 245 504 354 431 deformation 0;
-#X floatatom 26 97 5 0 0 0 - - -;
-#X floatatom 36 117 5 0 0 0 - - -;
-#X floatatom 47 167 5 0 0 0 - - -;
-#X floatatom 58 187 5 0 0 0 - - -;
-#X floatatom 68 237 5 0 0 0 - - -;
-#X floatatom 79 257 5 0 0 0 - - -;
-#X floatatom 90 307 5 0 0 0 - - -;
-#X floatatom 101 327 5 0 0 0 - - -;
-#X text 75 101 p1;
-#X text 97 173 p2;
-#X text 121 242 p3;
-#X text 141 312 and p4;
-#X text 12 96 x;
-#X text 12 116 y;
-#X text 12 166 x;
-#X text 12 186 y;
-#X text 12 236 x;
-#X text 12 256 y;
-#X text 12 306 x;
-#X text 12 326 y;
+#N canvas 468 490 385 478 deformation 1;
+#X floatatom 26 137 5 0 0 0 - - -;
+#X floatatom 36 157 5 0 0 0 - - -;
+#X floatatom 47 207 5 0 0 0 - - -;
+#X floatatom 58 227 5 0 0 0 - - -;
+#X floatatom 68 277 5 0 0 0 - - -;
+#X floatatom 79 297 5 0 0 0 - - -;
+#X floatatom 90 347 5 0 0 0 - - -;
+#X floatatom 101 367 5 0 0 0 - - -;
+#X text 75 141 p1;
+#X text 97 213 p2;
+#X text 121 282 p3;
+#X text 141 352 and p4;
+#X text 12 136 x;
+#X text 12 156 y;
+#X text 12 206 x;
+#X text 12 226 y;
+#X text 12 276 x;
+#X text 12 296 y;
+#X text 12 346 x;
+#X text 12 366 y;
 #N canvas 802 22 450 721 mouse_p1 0;
 #X obj 134 265 >;
 #X obj 194 265 <;
@@ -439,7 +439,7 @@
 #X connect 26 0 24 1;
 #X connect 26 0 25 1;
 #X connect 26 0 29 0;
-#X restore 56 73 pd mouse_p1;
+#X restore 56 113 pd mouse_p1;
 #N canvas 533 120 450 721 mouse_p2 0;
 #X obj 134 265 >;
 #X obj 194 265 <;
@@ -507,7 +507,7 @@
 #X connect 27 0 6 0;
 #X connect 28 0 8 0;
 #X connect 28 0 9 0;
-#X restore 76 143 pd mouse_p2;
+#X restore 76 183 pd mouse_p2;
 #N canvas 533 120 450 721 mouse_p3 0;
 #X obj 134 265 >;
 #X obj 194 265 <;
@@ -522,7 +522,7 @@
 #X obj 194 323 &&;
 #X obj 39 179 t f f;
 #X obj 69 129 t f f;
-#X obj 194 419 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 194 419 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 108 367 == 1;
 #X obj 108 419 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -575,7 +575,7 @@
 #X connect 27 0 6 0;
 #X connect 28 0 8 0;
 #X connect 28 0 9 0;
-#X restore 96 213 pd mouse_p3;
+#X restore 96 253 pd mouse_p3;
 #N canvas 533 120 450 721 mouse_p4 0;
 #X obj 134 265 >;
 #X obj 194 265 <;
@@ -643,7 +643,7 @@
 #X connect 27 0 6 0;
 #X connect 28 0 8 0;
 #X connect 28 0 9 0;
-#X restore 116 283 pd mouse_p4;
+#X restore 116 323 pd mouse_p4;
 #N canvas 430 161 766 549 rightorder 0;
 #X obj 59 314 f;
 #X obj 109 314 f;
@@ -898,10 +898,10 @@
 #X connect 43 5 22 0;
 #X connect 43 6 23 0;
 #X connect 43 7 24 0;
-#X restore 26 402 pd rightorder;
-#X obj 193 80 unpack f f f f f f f f;
-#X obj 193 -3 r ql-area_preset;
-#X obj 193 37 route \$1;
+#X restore 26 442 pd rightorder;
+#X obj 193 120 unpack f f f f f f f f;
+#X obj 193 7 r ql-area_preset;
+#X obj 193 77 route \$1;
 #X connect 0 0 24 0;
 #X connect 1 0 24 1;
 #X connect 2 0 24 2;
@@ -1645,7 +1645,7 @@
 #X obj 220 -157 r ql_area-\$1;
 #X obj 220 -121 route reset;
 #N canvas 570 343 400 563 state-saver 0;
-#X msg 69 443 -0.5 0.5 0.5 0.499 0.88 -0.898 -0.499 -0.499;
+#X msg 69 443 -2 1.26 1.584 2.384 3.168 0.8 2.448 0.256;
 #X obj 69 286 pack f f f f f f f f;
 #X obj 69 32 r \$0-p1_x;
 #X obj 85 52 r \$0-p1_y;
